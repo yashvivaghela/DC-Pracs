@@ -11,8 +11,9 @@ client_socket, addr =server_socket.accept()
 print("Message is coming from", addr)
 
 data=client_socket.recv(1024)
-print("Messgae received from server",data.decode())
+print("Message received from server",data.decode())
 
-
+message="Received"
+client_socket.sendall(message.encode())
 
 

@@ -9,3 +9,6 @@ client_socket.connect((HOST,PORT))
 print("Enter the message")
 message=input()
 client_socket.sendall(message.encode())
+
+data=client_socket.recv(1024)
+print("Message from server", data.decode())
